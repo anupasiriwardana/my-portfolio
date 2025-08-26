@@ -1,12 +1,4 @@
-import { useState } from 'react'
-import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react'
-
-interface FormData {
-    name: string;
-    email: string;
-    subject: string;
-    message: string;
-}
+import { Mail, Phone, MapPin, Github, Linkedin } from 'lucide-react'
 
 interface ContactInfo {
     icon: React.ReactNode;
@@ -22,38 +14,6 @@ interface SocialLink {
 }
 
 export default function Contact() {
-    const [formData, setFormData] = useState<FormData>({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-    })
-
-    const [isSubmitting, setIsSubmitting] = useState<boolean>(false)
-    const [submitStatus, setSubmitStatus] = useState<string>('')
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
-        })
-    }
-
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault()
-        setIsSubmitting(true)
-
-        // Simulate form submission
-        setTimeout(() => {
-            setIsSubmitting(false)
-            setSubmitStatus('Thank you for your message! I\'ll get back to you soon.')
-            setFormData({ name: '', email: '', subject: '', message: '' })
-
-            // Clear status message after 5 seconds
-            setTimeout(() => setSubmitStatus(''), 5000)
-        }, 1000)
-    }
-
     const contactInfo: ContactInfo[] = [
         {
             icon: <Mail size={24} />,
@@ -98,9 +58,9 @@ export default function Contact() {
                 <div className="flex flex-col items-center text-center space-y-12">
                     {/* Introduction */}
                     <div className="max-w-2xl">
-                        <h3 className="text-2xl font-semibold mb-6">Let's Connect</h3>
+                        <h3 className="text-2xl font-semibold mb-6">Let&apos;s Connect</h3>
                         <p className="text-gray-400 mb-8 leading-relaxed">
-                            I'm always interested in new opportunities, collaborations, and exciting projects.
+                            I&apos;m always interested in new opportunities, collaborations, and exciting projects.
                             Whether you have a question or just want to say hi, feel free to reach out!
                         </p>
                     </div>

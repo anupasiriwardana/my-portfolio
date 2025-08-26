@@ -1,4 +1,4 @@
-import { Award, Calendar, MapPin } from 'lucide-react'
+import { Award, MapPin } from 'lucide-react'
 
 interface Education {
   degree: string;

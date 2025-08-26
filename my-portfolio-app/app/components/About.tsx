@@ -9,7 +9,7 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-gray-300 leading-relaxed">
-              I'm a Software Engineering undergraduate at the University of Colombo School of Computing 
+              I&apos;m a Software Engineering undergraduate at the University of Colombo School of Computing 
               with a passion for building innovative solutions. Currently maintaining a 3.66/4.00 GPA, 
               I specialize in full-stack development with expertise in modern web technologies.
             </p>
