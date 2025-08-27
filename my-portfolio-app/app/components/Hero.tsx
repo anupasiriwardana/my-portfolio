@@ -7,16 +7,16 @@ interface HeroProps {
 
 export default function Hero({ scrollToSection }: HeroProps) {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-4">
+    <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-20">
       <div className="flex flex-col items-center justify-center w-full max-w-5xl mx-auto">
         {/* Profile Image at Top */}
         <div className="mb-8 flex justify-center w-full">
           <Image
             src="/profilePicture.jpg"
             alt="Profile picture"
-            width={320}
-            height={320}
-            className="w-80 h-80 object-cover rounded-full shadow-lg border-4 border-teal-400"
+            width={240}
+            height={240}
+            className="w-60 h-60 object-cover rounded-full shadow-lg border-4 border-teal-400"
             priority
           />
         </div>

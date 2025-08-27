@@ -9,18 +9,18 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-gray-300 leading-relaxed">
-              I&apos;m a Software Engineering undergraduate at the University of Colombo School of Computing 
-              with a passion for building innovative solutions. Currently maintaining a 3.66/4.00 GPA, 
-              I specialize in full-stack development with expertise in modern web technologies.
+              I&apos;m a Software Engineering undergraduate who&apos;s eager to learn and 
+              loves taking on challenges that expand my skill set. With a strong 
+              foundation in programming, data structures, algorithms, and agile methodologies, I enjoy 
+              building reliable and efficient solutions from concept to deployment.
             </p>
             
             <p className="text-gray-300 leading-relaxed">
-              My research interests lie in AI security, particularly in detecting adversarial attacks 
-              using behavioral biometrics. I enjoy tackling complex challenges and creating reliable, 
-              efficient solutions that make a meaningful impact.
+              My research interests are focused on AI security with behavioral biometrics analysis and 
+              I&apos;m passionate about exploring the intersection of artificial intelligence and cybersecurity.
             </p>
 
-            <div className="flex flex-wrap gap-4">
+            {/* <div className="flex flex-wrap gap-4">
               <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
                 <span className="text-teal-400 font-medium">Current GPA:</span>
                 <span className="ml-2 text-white">3.66/4.00</span>
@@ -29,7 +29,7 @@ export default function About() {
                 <span className="text-teal-400 font-medium">Location:</span>
                 <span className="ml-2 text-white">Colombo, Sri Lanka</span>
               </div>
-            </div>
+            </div> */}
           </div>
           
           <div className="space-y-6">
@@ -42,11 +42,7 @@ export default function About() {
                 </li>
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-teal-400 rounded-full mr-3"></div>
-                  AI Security Research
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-teal-400 rounded-full mr-3"></div>
-                  API Development & Integration
+                  RESTful API Design & Development
                 </li>
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-teal-400 rounded-full mr-3"></div>
@@ -54,7 +50,11 @@ export default function About() {
                 </li>
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-teal-400 rounded-full mr-3"></div>
-                  Cross-cultural Team Collaboration
+                  API Testing & Integration
+                </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-teal-400 rounded-full mr-3"></div>
+                  System Analysis & Design
                 </li>
               </ul>
             </div>
