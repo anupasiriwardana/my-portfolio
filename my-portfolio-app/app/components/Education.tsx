@@ -35,13 +35,13 @@ export default function Education() {
     {
       degree: "BCS Level 5 Diploma in IT",
       institution: "BCS, The Chartered Institute for IT",
-      period: "2022",
+      period: "2023",
       modules: ["Database Systems", "Object Oriented Programming", "Professional Issues in IS Practice", "System Analysis and Design"]
     },
     {
       degree: "BCS Level 4 Certificate in IT",
       institution: "BCS, The Chartered Institute for IT",
-      period: "2023",
+      period: "2022",
     },
     {
       degree: "GCE Advanced Level Examination",
