@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Github, Linkedin } from 'lucide-react'
+import { Mail, Phone, MapPin, Github, Linkedin, Download } from 'lucide-react'
 
 interface ContactInfo {
     icon: React.ReactNode;
@@ -63,6 +63,18 @@ export default function Contact() {
                             I&apos;m always interested in new opportunities, collaborations, and exciting projects.
                             Whether you have a question or just want to say hi, feel free to reach out!
                         </p>
+                        
+                        {/* Download Resume Button */}
+                        <div className="mb-8">
+                            <a
+                                href="/AnupaSiriwardana-RESUME.pdf"
+                                download="AnupaSiriwardana-RESUME.pdf"
+                                className="inline-flex items-center space-x-3 px-6 py-3 bg-teal-400 text-gray-900 font-semibold rounded-lg hover:bg-teal-300 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-teal-400/25"
+                            >
+                                <Download size={20} />
+                                <span>Download Resume</span>
+                            </a>
+                        </div>
                     </div>
 
                     {/* Contact Information Grid */}

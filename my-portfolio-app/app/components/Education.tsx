@@ -35,8 +35,13 @@ export default function Education() {
     {
       degree: "BCS Level 5 Diploma in IT",
       institution: "BCS, The Chartered Institute for IT",
-      period: "2023",
+      period: "2022",
       modules: ["Database Systems", "Object Oriented Programming", "Professional Issues in IS Practice", "System Analysis and Design"]
+    },
+    {
+      degree: "BCS Level 4 Certificate in IT",
+      institution: "BCS, The Chartered Institute for IT",
+      period: "2023",
     },
     {
       degree: "GCE Advanced Level Examination",
@@ -48,6 +53,12 @@ export default function Education() {
       degree: "Diploma in Information Technology",
       institution: "ESOFT Metro Campus",
       period: "2019"
+    },
+    {
+      degree: "GCE Ordinary Level Examination",
+      institution: "Carey College, Colombo 08",
+      period: "2018",
+      results: "9 'A's"
     }
   ]
 
@@ -71,19 +82,19 @@ export default function Education() {
       description: "Recognition for academic excellence: Year 2 Semester 1 and Semester 2"
     },
     {
-      title: "AIESEC Member - Incoming Global Volunteer Team",
-      institution: "AIESEC in University of Colombo",
-      description: "Supporting international volunteers and strengthening cross-cultural communication skills (2024-2025)"
-    },
-    {
       title: "Inter-faculty Championship - Football",
       institution: "University of Colombo",
       description: "Represented UCSC in Football and placed 2nd runners-up (2024)"
     },
     {
+      title: "AIESEC Member - Incoming Global Volunteer Team",
+      institution: "AIESEC in University of Colombo",
+      description: "Member of Incoming Global Volunteer (IGV) Team : Engaged with international volunteers by supporting them during their stay in Sri Lanka (2024-2025)"
+    },
+    {
       title: "Western Music & Dance Competition",
       institution: "All Island Inter-School Competition",
-      description: "Senior Brass Band member - 2nd runners-up (2017)"
+      description: "Performed as a member of the Senior Brass Band and secured 2nd runners-up (2017)"
     }
   ]
 
@@ -110,7 +121,7 @@ export default function Education() {
                 </div>
                 {edu.gpa && (
                   <div className="mb-2">
-                    <span className="text-teal-400 font-medium">GPA: </span>
+                    <span className="text-teal-400 font-medium">Current GPA: </span>
                     <span className="text-white">{edu.gpa}</span>
                   </div>
                 )}
