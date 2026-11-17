@@ -1,0 +1,18 @@
+[
+  {
+    "area": "Adversarial Machine Learning",
+    "title": "Adversarial Patch Detection for YOLO",
+    "status": "Ongoing",
+    "context": "Final year group research",
+    "description": "Object detectors like YOLO can be tricked by a printed patch placed in the scene, causing objects to disappear or be mislabelled. Our research builds a runtime monitoring layer around Ultralytics YOLO that watches the model's behaviour during inference and flags frames that look like they contain an adversarial patch, without retraining the detector itself.",
+    "tech": ["Python", "PyTorch", "Ultralytics YOLO"]
+  },
+  {
+    "area": "Blockchain & DeFi",
+    "title": "Programmable trust for funding",
+    "status": "Exploring",
+    "context": "Through ForgeCapita",
+    "description": "I'm interested in replacing trust in middlemen with verifiable code: milestone based escrow, token weighted governance, and automatic revenue sharing. Building ForgeCapita taught me how much of a financial product can live on-chain, and where off-chain services, indexers and gasless relayers still need to fill the gaps.",
+    "tech": ["Solidity", "Hardhat", "Ponder", "Viem"]
+  }
+]

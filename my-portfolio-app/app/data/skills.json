@@ -1,0 +1,21 @@
+{
+  "categories": [
+    {
+      "title": "Languages",
+      "skills": ["Java", "TypeScript", "JavaScript", "Python", "Solidity", "SQL", "C", "C++", "PHP", "R", "Octave", "HTML", "CSS"]
+    },
+    {
+      "title": "Frameworks & Libraries",
+      "skills": ["Spring Boot", "Node.js", "Express.js", "Next.js", "React", "FastAPI", "Hardhat", "Ponder", "Tailwind CSS"]
+    },
+    {
+      "title": "Databases & Messaging",
+      "skills": ["PostgreSQL", "MySQL", "MongoDB", "Qdrant", "RabbitMQ"]
+    },
+    {
+      "title": "Tools",
+      "skills": ["Git", "GitHub", "Docker", "Postman", "Swagger / OpenAPI", "Flyway", "Jira", "Vercel", "Render"]
+    }
+  ],
+  "soft": ["Team player", "Adaptability", "Problem solving", "Communication", "Cross-cultural communication"]
+}

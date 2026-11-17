@@ -1,178 +1,87 @@
-import { Award, MapPin } from 'lucide-react'
-
-interface Education {
-  degree: string;
-  institution: string;
-  period: string;
-  gpa?: string;
-  status?: string;
-  modules?: string[];
-  results?: string;
-}
-
-interface Certification {
-  title: string;
-  issuer: string;
-  year?: string;
-  status?: string;
-}
-
-interface Achievement {
-  title: string;
-  institution: string;
-  description: string;
-}
+import { Award, BadgeCheck, GraduationCap } from 'lucide-react'
+import { achievements, education } from '../data'
+import Reveal from './Reveal'
+import Section from './Section'
 
 export default function Education() {
-  const education: Education[] = [
-    {
-      degree: "BSc (Hons) in Software Engineering",
-      institution: "University of Colombo School of Computing",
-      period: "2023 - Present",
-      gpa: "3.66/4.00",
-      status: "Current"
-    },
-    {
-      degree: "BCS Level 5 Diploma in IT",
-      institution: "BCS, The Chartered Institute for IT",
-      period: "2023",
-      modules: ["Database Systems", "Object Oriented Programming", "Professional Issues in IS Practice", "System Analysis and Design"]
-    },
-    {
-      degree: "BCS Level 4 Certificate in IT",
-      institution: "BCS, The Chartered Institute for IT",
-      period: "2022",
-    },
-    {
-      degree: "GCE Advanced Level Examination",
-      institution: "Ananda College, Colombo 10",
-      period: "2022",
-      results: "Z-Score: 1.93 | ICT: 'A' | Combined Maths: 'B' | Physics: 'B'"
-    },
-    {
-      degree: "Diploma in Information Technology",
-      institution: "ESOFT Metro Campus",
-      period: "2019"
-    },
-    {
-      degree: "GCE Ordinary Level Examination",
-      institution: "Carey College, Colombo 08",
-      period: "2018",
-      results: "9 'A's"
-    }
-  ]
-
-  const certifications: Certification[] = [
-    {
-      title: "AWS Educate Introduction to Cloud 101",
-      issuer: "AWS Educate",
-      year: "2024"
-    },
-    {
-      title: "Supervised Machine Learning: Regression and Classification",
-      issuer: "DeepLearning.AI & Stanford Online",
-      status: "In Progress"
-    }
-  ]
-
-  const achievements: Achievement[] = [
-    {
-      title: "Director's List",
-      institution: "University of Colombo School of Computing",
-      description: "Recognition for academic excellence: Year 2 Semester 1 and Semester 2"
-    },
-    {
-      title: "Inter-faculty Championship - Football",
-      institution: "University of Colombo",
-      description: "Represented UCSC in Football and placed 2nd runners-up (2024)"
-    },
-    {
-      title: "AIESEC Member - Incoming Global Volunteer Team",
-      institution: "AIESEC in University of Colombo",
-      description: "Member of Incoming Global Volunteer (IGV) Team : Engaged with international volunteers by supporting them during their stay in Sri Lanka (2024-2025)"
-    },
-    {
-      title: "Western Music & Dance Competition",
-      institution: "All Island Inter-School Competition",
-      description: "Performed as a member of the Senior Brass Band and secured 2nd runners-up (2017)"
-    }
-  ]
-
   return (
-    <section id="education" className="py-20 px-4 bg-gray-800/30">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          Education & <span className="text-teal-400">Achievements</span>
-        </h2>
-        
-        {/* Education */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-semibold mb-8 text-teal-400">Education</h3>
-          <div className="space-y-6">
-            {education.map((edu, index) => (
-              <div key={index} className="bg-gray-900 rounded-lg p-6 border border-gray-700 hover:border-teal-400/30 transition-all duration-300">
-                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
-                  <h4 className="text-xl font-semibold text-white">{edu.degree}</h4>
-                  <span className="text-teal-400 font-medium">{edu.period}</span>
-                </div>
-                <div className="flex items-center mb-2">
-                  <MapPin size={16} className="text-gray-400 mr-2" />
-                  <p className="text-gray-300">{edu.institution}</p>
-                </div>
-                {edu.gpa && (
-                  <div className="mb-2">
-                    <span className="text-teal-400 font-medium">Current GPA: </span>
-                    <span className="text-white">{edu.gpa}</span>
-                  </div>
-                )}
-                {edu.results && (
-                  <p className="text-gray-300 mb-2">{edu.results}</p>
-                )}
-                {edu.modules && (
-                  <div>
-                    <span className="text-teal-400 font-medium">Key Modules: </span>
-                    <span className="text-gray-300">{edu.modules.join(', ')}</span>
-                  </div>
-                )}
-              </div>
-            ))}
+    <Section id="education" eyebrow="Education" title="Education, certifications & achievements">
+      <div className="mx-auto grid max-w-5xl gap-5 lg:grid-cols-2">
+        {/* Education timeline */}
+        <Reveal>
+          <div className="card h-full p-6 sm:p-8">
+            <div className="mb-6 flex items-center gap-3">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-canvas">
+                <GraduationCap size={18} />
+              </span>
+              <h3 className="text-lg font-medium tracking-tight">Education</h3>
+            </div>
+            <ol className="space-y-6">
+              {education.education.map((e) => (
+                <li key={e.title} className="relative border-l border-line pl-5">
+                  <span
+                    className={`absolute -left-[4.5px] top-1.5 h-2 w-2 rounded-full ${
+                      e.current ? 'bg-accent' : 'bg-ink'
+                    }`}
+                  />
+                  <p className="font-mono text-xs text-muted">{e.period}</p>
+                  <h4 className="mt-1 font-medium">{e.title}</h4>
+                  <p className="text-sm text-ink-soft">{e.institution}</p>
+                  {e.detail && <p className="mt-1 text-sm text-muted">{e.detail}</p>}
+                </li>
+              ))}
+            </ol>
           </div>
-        </div>
+        </Reveal>
 
         {/* Certifications */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-semibold mb-8 text-teal-400">Certifications & Courses</h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            {certifications.map((cert, index) => (
-              <div key={index} className="bg-gray-900 rounded-lg p-6 border border-gray-700 hover:border-teal-400/30 transition-all duration-300">
-                <h4 className="text-lg font-semibold text-white mb-2">{cert.title}</h4>
-                <p className="text-gray-300 mb-2">{cert.issuer}</p>
-                {cert.year && <p className="text-teal-400">{cert.year}</p>}
-                {cert.status && <p className="text-teal-400">{cert.status}</p>}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Achievements */}
-        <div>
-          <h3 className="text-2xl font-semibold mb-8 text-teal-400">Achievements & Activities</h3>
-          <div className="space-y-6">
-            {achievements.map((achievement, index) => (
-              <div key={index} className="bg-gray-900 rounded-lg p-6 border border-gray-700 hover:border-teal-400/30 transition-all duration-300">
-                <div className="flex items-start">
-                  <Award className="text-teal-400 mt-1 mr-3 flex-shrink-0" size={20} />
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-1">{achievement.title}</h4>
-                    <p className="text-teal-400 mb-2">{achievement.institution}</p>
-                    <p className="text-gray-300">{achievement.description}</p>
+        <Reveal delay={100}>
+          <div className="card h-full p-6 sm:p-8">
+            <div className="mb-6 flex items-center gap-3">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-canvas">
+                <BadgeCheck size={18} />
+              </span>
+              <h3 className="text-lg font-medium tracking-tight">Certifications & courses</h3>
+            </div>
+            <ul className="divide-y divide-line">
+              {education.certifications.map((c) => (
+                <li key={c.title} className="py-4 first:pt-0 last:pb-0">
+                  <div className="flex items-start justify-between gap-4">
+                    <h4 className="font-medium">{c.title}</h4>
+                    {c.year && <span className="shrink-0 font-mono text-xs text-muted">{c.year}</span>}
                   </div>
-                </div>
-              </div>
-            ))}
+                  <p className="text-sm text-ink-soft">{c.issuer}</p>
+                  {c.detail && <p className="mt-1 text-sm text-muted">{c.detail}</p>}
+                </li>
+              ))}
+            </ul>
           </div>
-        </div>
+        </Reveal>
       </div>
-    </section>
+
+      {/* Achievements */}
+      <div className="mx-auto mt-5 max-w-5xl">
+        <Reveal>
+          <div className="card p-6 sm:p-8">
+            <div className="mb-6 flex items-center gap-3">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-canvas">
+                <Award size={18} />
+              </span>
+              <h3 className="text-lg font-medium tracking-tight">Achievements & activities</h3>
+            </div>
+            <ul className="grid gap-x-10 gap-y-6 md:grid-cols-2">
+              {achievements.map((a) => (
+                <li key={a.title}>
+                  <p className="font-mono text-xs text-muted">{a.year}</p>
+                  <h4 className="mt-1 font-medium">{a.title}</h4>
+                  <p className="text-sm text-ink-soft">{a.org}</p>
+                  <p className="mt-1 text-sm text-muted">{a.description}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Reveal>
+      </div>
+    </Section>
   )
 }

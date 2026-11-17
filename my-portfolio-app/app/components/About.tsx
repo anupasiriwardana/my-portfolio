@@ -1,66 +1,45 @@
+import { Check } from 'lucide-react'
+import { profile } from '../data'
+import Reveal from './Reveal'
+import Section from './Section'
+
 export default function About() {
   return (
-    <section id="about" className="py-20 px-4">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          About <span className="text-teal-400">Me</span>
-        </h2>
-        
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <p className="text-gray-300 leading-relaxed">
-              I&apos;m a Software Engineering undergraduate who&apos;s eager to learn and 
-              loves taking on challenges that expand my skill set. With a strong 
-              foundation in programming, data structures, algorithms, and agile methodologies, I enjoy 
-              building reliable and efficient solutions from concept to deployment.
+    <Section id="about" eyebrow="About" title="A backend focused engineer who likes to build things end to end.">
+      <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-5">
+        <Reveal className="space-y-5 md:col-span-3">
+          {profile.about.map((para, i) => (
+            <p key={i} className="leading-relaxed text-ink-soft">
+              {para}
             </p>
-            
-            <p className="text-gray-300 leading-relaxed">
-              My research interests are focused on AI security with behavioral biometrics analysis and 
-              I&apos;m passionate about exploring the intersection of artificial intelligence and cybersecurity.
-            </p>
+          ))}
 
-            {/* <div className="flex flex-wrap gap-4">
-              <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
-                <span className="text-teal-400 font-medium">Current GPA:</span>
-                <span className="ml-2 text-white">3.66/4.00</span>
+          <div className="grid grid-cols-3 gap-3 pt-3">
+            {profile.stats.map((s) => (
+              <div key={s.label} className="card px-3 py-4 text-center sm:px-4">
+                <p className="text-2xl font-medium tracking-tight sm:text-3xl">{s.value}</p>
+                <p className="mt-1 text-[0.7rem] text-muted sm:text-xs">{s.label}</p>
               </div>
-              <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
-                <span className="text-teal-400 font-medium">Location:</span>
-                <span className="ml-2 text-white">Colombo, Sri Lanka</span>
-              </div>
-            </div> */}
+            ))}
           </div>
-          
-          <div className="space-y-6">
-            <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
-              <h3 className="text-xl font-semibold text-teal-400 mb-4">What I Do</h3>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-teal-400 rounded-full mr-3"></div>
-                  Full Stack Web Development
+        </Reveal>
+
+        <Reveal delay={120} className="md:col-span-2">
+          <div className="card h-full p-6">
+            <p className="eyebrow mb-4">What I work on</p>
+            <ul className="space-y-3">
+              {profile.focus.map((f) => (
+                <li key={f} className="flex items-start gap-3 text-sm text-ink-soft">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-canvas">
+                    <Check size={12} />
+                  </span>
+                  {f}
                 </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-teal-400 rounded-full mr-3"></div>
-                  RESTful API Design & Development
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-teal-400 rounded-full mr-3"></div>
-                  Database Design & Management
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-teal-400 rounded-full mr-3"></div>
-                  API Testing & Integration
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-teal-400 rounded-full mr-3"></div>
-                  System Analysis & Design
-                </li>
-              </ul>
-            </div>
+              ))}
+            </ul>
           </div>
-        </div>
+        </Reveal>
       </div>
-    </section>
+    </Section>
   )
 }
