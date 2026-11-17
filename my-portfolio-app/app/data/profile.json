@@ -1,0 +1,32 @@
+{
+  "name": "Anupa Siriwardana",
+  "shortName": "Anupa",
+  "role": "Software Engineering Undergraduate",
+  "interests": "Blockchain & Adversarial ML Enthusiast",
+  "headline": "Building reliable backends and on‑chain systems.",
+  "photo": "/profilePicture.jpg",
+  "resume": "/AnupaSiriwardana-RESUME.pdf",
+  "location": "Colombo, Sri Lanka",
+  "email": "anupasiriwardana123@gmail.com",
+  "phone": "+94 76 881 2712",
+  "links": {
+    "github": "https://github.com/anupasiriwardana",
+    "linkedin": "https://linkedin.com/in/anupa-siriwardana-198471235"
+  },
+  "about": [
+    "I'm a final year Software Engineering undergraduate at the University of Colombo School of Computing. I enjoy backend work the most: designing REST APIs, modelling data, and making sure things stay consistent and secure when many operations hit the database at once.",
+    "During my six month internship at Kingslake I worked on production backend services alongside senior engineers and QA. Outside of work, building ForgeCapita pulled me into smart contracts and how financial systems can run on-chain, while my final year research looks at how object detectors can be fooled by adversarial patches, and how to catch it."
+  ],
+  "stats": [
+    { "value": "3.67", "label": "Current GPA" },
+    { "value": "3×", "label": "Director's List" },
+    { "value": "6 mo", "label": "SE internship" }
+  ],
+  "focus": [
+    "Backend & REST API development",
+    "Smart contracts & on-chain indexing",
+    "Database design & SQL",
+    "Full stack web apps",
+    "Adversarial ML research"
+  ]
+}

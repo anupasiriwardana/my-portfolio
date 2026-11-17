@@ -1,126 +1,69 @@
-import { Mail, Phone, MapPin, Github, Linkedin, Download } from 'lucide-react'
-
-interface ContactInfo {
-    icon: React.ReactNode;
-    label: string;
-    value: string;
-    link?: string;
-}
-
-interface SocialLink {
-    icon: React.ReactNode;
-    label: string;
-    url: string;
-}
+import { ArrowUpRight, Download, Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react'
+import { profile } from '../data'
+import Reveal from './Reveal'
 
 export default function Contact() {
-    const contactInfo: ContactInfo[] = [
-        {
-            icon: <Mail size={24} />,
-            label: "Email",
-            value: "anupasiriwardana123@gmail.com",
-            link: "mailto:anupasiriwardana123@gmail.com"
-        },
-        {
-            icon: <Phone size={24} />,
-            label: "Phone",
-            value: "+94 76 881 2712",
-            link: "tel:+94768812712"
-        },
-        {
-            icon: <MapPin size={24} />,
-            label: "Location",
-            value: "Colombo, Sri Lanka"
-        }
-    ]
+  const details = [
+    { icon: Mail, label: 'Email', value: profile.email, href: `mailto:${profile.email}` },
+    { icon: Phone, label: 'Phone', value: profile.phone, href: `tel:${profile.phone.replace(/\s/g, '')}` },
+    { icon: MapPin, label: 'Location', value: profile.location },
+  ]
 
-    const socialLinks: SocialLink[] = [
-        {
-            icon: <Github size={24} />,
-            label: "GitHub",
-            url: "https://github.com/anupasiriwardana"
-        },
-        {
-            icon: <Linkedin size={24} />,
-            label: "LinkedIn",
-            url: "https://linkedin.com/in/anupa-siriwardana-198471235"
-        }
-    ]
+  return (
+    <section id="contact" className="panel px-5 py-16 sm:px-10 sm:py-24">
+      <Reveal className="mx-auto flex max-w-2xl flex-col items-center text-center">
+        <span className="pill mb-6">Contact</span>
+        <h2 className="text-3xl font-medium tracking-tight text-balance sm:text-5xl">
+          Let&apos;s build something together.
+        </h2>
+        <p className="mt-5 leading-relaxed text-muted">
+          I&apos;m looking for Software Engineer roles and I&apos;m always happy to talk about backend systems,
+          blockchain or ML security. Drop me an email and I&apos;ll get back to you.
+        </p>
 
-    return (
-        <section id="contact" className="py-20 px-4">
-            <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-                    Get In <span className="text-teal-400">Touch</span>
-                </h2>
+        <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
+          <a href={`mailto:${profile.email}`} className="btn-dark">
+            <Mail size={16} /> Say hello
+          </a>
+          <a href={profile.resume} download="AnupaSiriwardana-RESUME.pdf" className="btn-light">
+            <Download size={16} /> Download resume
+          </a>
+        </div>
+      </Reveal>
 
-                {/* Contact Info - Centered Layout */}
-                <div className="flex flex-col items-center text-center space-y-12">
-                    {/* Introduction */}
-                    <div className="max-w-2xl">
-                        <h3 className="text-2xl font-semibold mb-6">Let&apos;s Connect</h3>
-                        <p className="text-gray-400 mb-8 leading-relaxed">
-                            I&apos;m always interested in new opportunities, collaborations, and exciting projects.
-                            Whether you have a question or just want to say hi, feel free to reach out!
-                        </p>
-                        
-                        {/* Download Resume Button */}
-                        <div className="mb-8">
-                            <a
-                                href="/AnupaSiriwardana-RESUME.pdf"
-                                download="AnupaSiriwardana-RESUME.pdf"
-                                className="inline-flex items-center space-x-3 px-6 py-3 bg-teal-400 text-gray-900 font-semibold rounded-lg hover:bg-teal-300 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-teal-400/25"
-                            >
-                                <Download size={20} />
-                                <span>Download Resume</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    {/* Contact Information Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-3xl">
-                        {contactInfo.map((item, index) => (
-                            <div key={index} className="flex flex-col items-center text-center space-y-3">
-                                <div className="p-4 bg-teal-400/10 rounded-full text-teal-400 border border-teal-400/30">
-                                    {item.icon}
-                                </div>
-                                <div>
-                                    <p className="text-gray-400 text-sm font-medium mb-1">{item.label}</p>
-                                    {item.link ? (
-                                        <a
-                                            href={item.link}
-                                            className="text-white hover:text-teal-400 transition-colors text-sm"
-                                        >
-                                            {item.value}
-                                        </a>
-                                    ) : (
-                                        <p className="text-white text-sm">{item.value}</p>
-                                    )}
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Social Links */}
-                    <div className="flex flex-col items-center space-y-6">
-                        <h4 className="text-lg font-semibold">Follow Me</h4>
-                        <div className="flex space-x-6">
-                            {socialLinks.map((social, index) => (
-                                <a
-                                    key={index}
-                                    href={social.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="p-4 bg-gray-800 rounded-full text-gray-400 hover:text-teal-400 hover:bg-teal-400/10 transition-all duration-300 border border-gray-700 hover:border-teal-400/30 transform hover:scale-110"
-                                    title={social.label}
-                                >
-                                    {social.icon}
-                                </a>
-                            ))}
-                        </div>
-                    </div>
-                </div>
+      <Reveal delay={120} className="mx-auto mt-14 grid max-w-4xl gap-4 md:grid-cols-[1.5fr_1fr_1fr]">
+        {details.map(({ icon: Icon, label, value, href }) => {
+          const body = (
+            <>
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-canvas">
+                <Icon size={17} />
+              </span>
+              <span className="min-w-0">
+                <span className="block text-xs text-muted">{label}</span>
+                <span className="block truncate text-sm">{value}</span>
+              </span>
+            </>
+          )
+          return href ? (
+            <a key={label} href={href} className="card card-hover flex items-center gap-3 p-4">
+              {body}
+            </a>
+          ) : (
+            <div key={label} className="card flex items-center gap-3 p-4">
+              {body}
             </div>
-        </section>
-    )
+          )
+        })}
+      </Reveal>
+
+      <Reveal delay={200} className="mt-8 flex justify-center gap-3">
+        <a href={profile.links.github} target="_blank" rel="noopener noreferrer" className="btn-light !py-2">
+          <Github size={16} /> GitHub <ArrowUpRight size={14} className="text-muted" />
+        </a>
+        <a href={profile.links.linkedin} target="_blank" rel="noopener noreferrer" className="btn-light !py-2">
+          <Linkedin size={16} /> LinkedIn <ArrowUpRight size={14} className="text-muted" />
+        </a>
+      </Reveal>
+    </section>
+  )
 }

@@ -1,0 +1,51 @@
+{
+  "education": [
+    {
+      "title": "BSc (Hons) in Software Engineering",
+      "institution": "University of Colombo School of Computing",
+      "period": "2023 - 2027 (Expected)",
+      "detail": "Current GPA: 3.67 / 4.00",
+      "current": true
+    },
+    {
+      "title": "GCE Advanced Level Examination",
+      "institution": "Ananda College, Colombo 10",
+      "period": "2022",
+      "detail": "Z-Score: 1.93 · ICT: A · Combined Maths: B · Physics: B"
+    },
+    {
+      "title": "Diploma in Information Technology",
+      "institution": "ESOFT Metro Campus",
+      "period": "2019"
+    },
+    {
+      "title": "GCE Ordinary Level Examination",
+      "institution": "Carey College, Colombo 08",
+      "period": "2018",
+      "detail": "9 A's"
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Supervised Machine Learning: Regression and Classification",
+      "issuer": "DeepLearning.AI & Stanford Online",
+      "year": "Completed"
+    },
+    {
+      "title": "AWS Educate Introduction to Cloud 101",
+      "issuer": "AWS Educate",
+      "year": "2024"
+    },
+    {
+      "title": "BCS Level 5 Diploma in IT",
+      "issuer": "BCS, The Chartered Institute for IT",
+      "year": "2023",
+      "detail": "Database Systems, OOP, Professional Issues in IS Practice, System Analysis and Design"
+    },
+    {
+      "title": "BCS Level 4 Certificate in IT",
+      "issuer": "BCS, The Chartered Institute for IT",
+      "year": "2022"
+    }
+  ]
+}

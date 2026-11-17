@@ -1,71 +1,60 @@
-import { Github, Linkedin, Mail, ChevronDown } from 'lucide-react'
 import Image from 'next/image'
+import { ArrowDown, ArrowUpRight, Github, Linkedin, Mail, MapPin } from 'lucide-react'
+import { profile } from '../data'
 
-interface HeroProps {
-  scrollToSection: (sectionId: string) => void;
-}
-
-export default function Hero({ scrollToSection }: HeroProps) {
+export default function Hero() {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-20">
-      <div className="flex flex-col items-center justify-center w-full max-w-5xl mx-auto">
-        {/* Profile Image at Top */}
-        <div className="mb-8 flex justify-center w-full">
+    <section id="home" className="panel relative overflow-hidden px-5 pb-14 pt-28 sm:px-10 sm:pb-20 sm:pt-36">
+      <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
+        <div className="relative mb-7">
           <Image
-            src="/profilePicture.jpg"
-            alt="Profile picture"
-            width={240}
-            height={240}
-            className="w-60 h-60 object-cover rounded-full shadow-lg border-4 border-teal-400"
+            src={profile.photo}
+            alt={profile.name}
+            width={176}
+            height={176}
             priority
+            className="h-36 w-36 rounded-full object-cover ring-4 ring-card shadow-[0_12px_32px_-14px_rgb(0_0_0/0.35)] sm:h-44 sm:w-44"
           />
         </div>
-        {/* Name and Description Side by Side (now stacked) */}
-        <div className="flex flex-col items-center justify-center w-full mb-10">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in text-center">
-            <span className="text-white">Anupa</span>
-            <span className="text-teal-400"> Siriwardana</span>
-          </h1>
-          <p className="text-2xl md:text-4xl text-gray-400 mb-4 animate-fade-in-delay text-center">
-            Full Stack Developer
-          </p>
-          <p className="text-xl text-gray-500 mb-0 max-w-2xl mx-auto leading-relaxed text-center">
-            Software Engineering Undergraduate | AI Security Enthusiast
-          </p>
+
+        <p className="mb-4 text-xl font-medium tracking-tight text-muted sm:text-2xl">
+          Hi, I&apos;m {profile.name}
+        </p>
+
+        <h1 className="text-[2.4rem] font-medium leading-[1.08] tracking-tight text-balance sm:text-6xl">
+          {profile.headline}
+        </h1>
+
+        <p className="mt-6 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-sm text-ink-soft sm:text-base">
+          <span>{profile.role}</span>
+          <span className="hidden h-1 w-1 rounded-full bg-muted sm:inline-block" />
+          <span>{profile.interests}</span>
+        </p>
+
+        <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
+          <a href="#projects" className="btn-dark">
+            See my work <ArrowDown size={16} />
+          </a>
+          <a href={profile.resume} target="_blank" rel="noopener noreferrer" className="btn-light">
+            Resume <ArrowUpRight size={16} />
+          </a>
         </div>
-        {/* Social Links and Scroll Button Below */}
-        <div className="flex flex-col items-center">
-          <div className="flex justify-center space-x-6 mb-8">
-            <a 
-              href="https://github.com/anupasiriwardana" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="p-3 rounded-full bg-gray-800 hover:bg-teal-400/10 hover:text-teal-400 transition-all duration-300 transform hover:scale-110"
-            >
-              <Github size={24} />
-            </a>
-            <a 
-              href="https://linkedin.com/in/anupa-siriwardana-198471235" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="p-3 rounded-full bg-gray-800 hover:bg-teal-400/10 hover:text-teal-400 transition-all duration-300 transform hover:scale-110"
-            >
-              <Linkedin size={24} />
-            </a>
-            <a 
-              href="mailto:anupasiriwardana123@gmail.com"
-              className="p-3 rounded-full bg-gray-800 hover:bg-teal-400/10 hover:text-teal-400 transition-all duration-300 transform hover:scale-110"
-            >
-              <Mail size={24} />
-            </a>
-          </div>
-          <button 
-            onClick={() => scrollToSection('about')}
-            className="animate-bounce text-teal-400 hover:text-teal-300 transition-colors duration-300"
-          >
-            <ChevronDown size={32} />
-          </button>
+
+        <div className="mt-8 flex items-center gap-3">
+          <a href={profile.links.github} target="_blank" rel="noopener noreferrer" className="icon-btn" aria-label="GitHub">
+            <Github size={18} />
+          </a>
+          <a href={profile.links.linkedin} target="_blank" rel="noopener noreferrer" className="icon-btn" aria-label="LinkedIn">
+            <Linkedin size={18} />
+          </a>
+          <a href={`mailto:${profile.email}`} className="icon-btn" aria-label="Email">
+            <Mail size={18} />
+          </a>
         </div>
+
+        <p className="mt-8 inline-flex items-center gap-1.5 text-xs text-muted">
+          <MapPin size={13} /> {profile.location}
+        </p>
       </div>
     </section>
   )

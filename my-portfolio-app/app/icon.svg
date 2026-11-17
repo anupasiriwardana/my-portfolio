@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="32" fill="#111111"/>
+  <!-- Geometric "A" drawn as a path so it renders the same everywhere -->
+  <path fill="#fafaf8" fill-rule="evenodd" d="M28.4 15h7.2l11.4 34h-6.4l-2.6-8H25.99l-2.59 8H17zM32 21.6 27.6 35.8h8.8z"/>
+</svg>

@@ -1,0 +1,20 @@
+[
+  {
+    "role": "Intern - Software Engineer",
+    "company": "Kingslake",
+    "location": "Colombo, Sri Lanka",
+    "period": "Nov 2025 - Apr 2026",
+    "summary": "Six month industrial placement on the backend team, working on two production systems alongside senior engineers and QA.",
+    "projects": [
+      {
+        "name": "KingslakeBlue Line Balancing",
+        "description": "My main focus. I built and optimized core REST services, using database transactions to keep data consistent across multi-step operations. I improved data retrieval services to cut latency, added CRUD features for employee and operational management, reworked the calculation logic behind performance reports, and moved queries to parameterized statements to close off SQL injection risks."
+      },
+      {
+        "name": "Transport Management System (TMS)",
+        "description": "I reviewed the TMS backend architecture, including how RabbitMQ is used as a message broker between services. I worked with the QA team to track down and fix critical issues in bulk data processing and account management, and visited customer sites to diagnose problems directly in the TMS mobile app."
+      }
+    ],
+    "tech": ["Node.js", "JavaScript", "SQL", "MySQL", "RabbitMQ", "Docker", "Postman", "Git", "KingslakeBlue DevFrame"]
+  }
+]

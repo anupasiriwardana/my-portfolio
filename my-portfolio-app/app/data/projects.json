@@ -1,0 +1,74 @@
+{
+  "featured": [
+    {
+      "title": "ForgeCapita",
+      "subtitle": "Milestone based crowdfunding platform",
+      "status": "Ongoing",
+      "type": "Personal Project",
+      "image": "/forgecapita.png",
+      "github": "https://github.com/anupasiriwardana/forgeCapita",
+      "description": "Investors fund SaaS startups through milestone based escrow, and the startup's revenue flows back to them automatically through smart contracts. Each project gets its own token, escrow, staking vault and revenue router, deployed by a factory contract. Investors stake tokens to vote on each milestone before funds are released, and incoming revenue is split 75% to stakers, 24% to the founder and 1% to the platform. Currently live on the Arbitrum Sepolia and BSC testnets.",
+      "highlights": [
+        "Solidity contracts for escrow, voting, dividends and a P2P token exchange, tested with Hardhat",
+        "Node.js + TypeScript API with wallet sign-in and a gasless transaction relayer",
+        "Multi-chain Ponder indexer storing on-chain events in PostgreSQL, served over GraphQL",
+        "Next.js frontend with separate areas for investors, founders and staff"
+      ],
+      "tech": ["Solidity", "Hardhat", "TypeScript", "Node.js", "Express.js", "Next.js", "Ponder", "Viem", "GraphQL", "PostgreSQL", "Docker"]
+    },
+    {
+      "title": "Zypher",
+      "subtitle": "CI/CD pipeline security assistant",
+      "status": "Completed",
+      "type": "Group Project · 2025",
+      "image": "/Zypher3.png",
+      "github": "https://github.com/anupasiriwardana/zypher",
+      "description": "A full stack web app that runs static analysis on CI/CD configuration files to catch vulnerabilities and enforce best practices. It uses a rule based scan engine with dynamically loaded rules, and reports each finding with a severity, the exact code location and a suggested fix.",
+      "highlights": [
+        "Took part in sprint planning and built parts of the core scanning logic and scan engine",
+        "Built REST endpoints for scan operations and tested them with Swagger UI",
+        "Deployed and managed the Next.js app and FastAPI backend on Render"
+      ],
+      "tech": ["Next.js", "Tailwind CSS", "FastAPI", "MongoDB", "GitHub API", "Render"]
+    },
+    {
+      "title": "SkillSwap",
+      "subtitle": "Skill exchange platform",
+      "status": "Completed",
+      "type": "Personal Project · 2026",
+      "image": "/SkillSwap.png",
+      "github": "https://github.com/anupasiriwardana/SkillSwap",
+      "description": "A web app where people list the skills they can teach and the skills they want to learn, then get matched with others whose skills complement theirs. The backend is a Spring Boot REST API secured with Spring Security and JWT, with database migrations managed by Flyway.",
+      "highlights": [
+        "Spring Boot REST API with Spring Security and JWT authentication",
+        "Skill matching between teachers and learners",
+        "Versioned schema migrations with Flyway on PostgreSQL",
+        "React frontend, containerized with Docker"
+      ],
+      "tech": ["Java", "Spring Boot", "Spring Data JPA", "Flyway", "React", "PostgreSQL", "Docker"]
+    }
+  ],
+  "other": [
+    {
+      "title": "Multimodal RAG Tourism System",
+      "type": "Group Project · 2026",
+      "github": "https://github.com/tilaknagunawardhane/Multimodal-Rag-Tourism",
+      "description": "A Sri Lanka tourism assistant that answers both text and image queries. It combines SQL lookups in PostgreSQL (fees, hours, locations) with semantic text search and CLIP image search over Qdrant, then uses Gemini to extract intent and write the final answer, with memory for multi-turn chats.",
+      "tech": ["Python", "PostgreSQL", "Qdrant", "SentenceTransformers", "CLIP", "Gemini API", "Streamlit"]
+    },
+    {
+      "title": "GymVerse",
+      "type": "Group Project",
+      "github": "https://github.com/Threadstone15/Group_Project_48",
+      "description": "A gym management platform connecting members, trainers and the owner. Includes workout and meal plans, QR based attendance, class booking and an owner analytics dashboard, built on a custom JavaScript router that gives it single page app behaviour.",
+      "tech": ["JavaScript", "PHP", "MySQL", "HTML/CSS"]
+    },
+    {
+      "title": "VolunteerLink",
+      "type": "Group Project",
+      "github": "https://github.com/anupasiriwardana/VolunteerLink",
+      "description": "A platform that connects volunteers with organizations looking for skilled people. Covers profiles, opportunity listings, applications and status tracking.",
+      "tech": ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"]
+    }
+  ]
+}
