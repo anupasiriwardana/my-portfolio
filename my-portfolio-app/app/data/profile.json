@@ -14,19 +14,29 @@
     "linkedin": "https://linkedin.com/in/anupa-siriwardana-198471235"
   },
   "about": [
-    "I'm a final year Software Engineering undergraduate at the University of Colombo School of Computing. I enjoy backend work the most: designing REST APIs, modelling data, and making sure things stay consistent and secure when many operations hit the database at once.",
-    "During my six month internship at Kingslake I worked on production backend services alongside senior engineers and QA. Outside of work, building ForgeCapita pulled me into smart contracts and how financial systems can run on-chain, while my final year research looks at how object detectors can be fooled by adversarial patches, and how to catch it."
+    "I’m a final year Software Engineering undergraduate at the University of Colombo School of Computing (UCSC). I enjoy turning ideas into reliable, well structured software, and my main focus is the backend: designing APIs, modelling data, and thinking about how systems stay consistent and secure as they grow.",
+    "My internship gave me hands-on experience with production systems and working in an agile team alongside engineers and QA. Beyond that, I’m interested in how financial systems can run on-chain, while my final year research looks at how object detection models can be attacked and defended."
   ],
   "stats": [
-    { "value": "3.67", "label": "Current GPA" },
-    { "value": "3×", "label": "Director's List" },
-    { "value": "6 mo", "label": "SE internship" }
+    {
+      "value": "3.67",
+      "label": "Current GPA"
+    },
+    {
+      "value": "3×",
+      "label": "Director's List"
+    },
+    {
+      "value": "20+",
+      "label": "Technologies used"
+    }
   ],
   "focus": [
     "Backend & REST API development",
-    "Smart contracts & on-chain indexing",
-    "Database design & SQL",
+    "System design & architecture",
+    "Database design & management",
     "Full stack web apps",
+    "Web3 & smart contracts",
     "Adversarial ML research"
   ]
 }
