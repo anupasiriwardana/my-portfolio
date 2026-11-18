@@ -5,7 +5,7 @@ import Section from './Section'
 
 export default function About() {
   return (
-    <Section id="about" eyebrow="About" title="A backend focused engineer who likes to build things end to end.">
+    <Section id="about" eyebrow="About" title="Curious about how things work, focused on making them work well.">
       <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-5">
         <Reveal className="space-y-5 md:col-span-3">
           {profile.about.map((para, i) => (
